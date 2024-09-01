@@ -90,13 +90,13 @@ zkSync Wallet Initialization: Initializes a zkSync wallet to interact with Layer
 
 ## Code Overview
 
-# Main Functionalities
+### Main Functionalities
 - connectWallet: Connects to MetaMask and fetches user accounts.
 - initializeZkSyncWallet: Initializes the zkSync wallet for Layer 2 transactions.
 - fetchBalances: Retrieves and displays ETH and token balances for the paymaster and sender.
 - handleSendMoney: Facilitates the transfer of ETH using zkSync, ensuring tokens are approved for the paymaster if necessary.
   
-# Libraries and Dependencies
+### Libraries and Dependencies
 - React: Frontend framework for building UI components.
 - Web3.js: JavaScript library for interacting with the Ethereum blockchain.
 - web3-plugin-zksync: Plugin for integrating zkSync functionality with Web3.js.
