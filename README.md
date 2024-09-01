@@ -25,15 +25,6 @@ Before running the application, ensure you have the following:
 - Ensures fast and low-cost transactions for users
 
 
-## Deployment
-
-TerraLedger is deployed and accessible on:
-
-- Fleek: [https://terraledger.on.fleek.co](https://terraledger.on.fleek.co)
-- Vercel: [https://terraledger.vercel.app](https://terraledger.vercel.app)
-
-You can access and interact with the application through either of these links.
-
 ## Getting Started
 
 1. Clone the repository:
