@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# FlowPay - Gasless Payments on zkSync
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+FlowPay is a React-based web application that allows users to make gasless payments using zkSync on Ethereum Layer 2. This application connects to MetaMask, manages balances, and facilitates ETH transfers with reduced gas fees through zkSyn
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+- Wallet Connection: Connects to MetaMask for Ethereum transactions.
+- zkSync Integration: Utilizes zkSync for gasless transactions on Layer 2.
+- Balance Display: Shows ETH and token balances for the paymaster and sender.
+- Gasless Transfers: Allows ETH transfers without high gas costs by using zkSync’s paymaster model.
+- Real-Time Updates: Fetches and displays updated balances and transaction statuses
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Before running the application, ensure you have the following:
+- Node.js and npm installed on your local machine.
+- MetaMask extension installed in your browser.
+- An Ethereum wallet with funds in the Sepolia test network (or other zkSync-supported networks).
 
-### `npm test`
+### Scaffold-ETH
+- Used for rapid development and prototyping of our TerraLedger dApp
+- Provides templates and examples for smart contract development
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### The Graph
+- Indexes land ownership data for efficient querying
+- Enables real-time search and verification of land records
+- Utilizes GraphQL API for flexible data retrieval
 
-### `npm run build`
+### zkSync (Paymaster)
+- Handles payments and transactions within the system
+- Ensures fast and low-cost transactions for users
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Optimism
+- Implements Optimistic Rollups for scalable and cost-effective transaction processing
+- Utilizes Optimism SDK for integration with Layer 2 network
+- Employs Optimism Gateway for cross-network asset management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+TerraLedger is deployed and accessible on:
 
-### `npm run eject`
+- Fleek: [https://terraledger.on.fleek.co](https://terraledger.on.fleek.co)
+- Vercel: [https://terraledger.vercel.app](https://terraledger.vercel.app)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You can access and interact with the application through either of these links.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/flowpay.git
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Navigate to the Project Directory:
+   ```
+   cd flowpay
 
-## Learn More
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Install Dependencies
+   ```
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Run the Application
+   ```
+   npm start
+   ```
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Connect Wallet: Click the "Connect Wallet" button to connect your MetaMask wallet.
 
-### Analyzing the Bundle Size
+2.Check Balances: The application will display the ETH and token balances for the paymaster and sender once the wallet is connected.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Send Money:
 
-### Making a Progressive Web App
+- Enter the recipient’s address in the "Recipient Address" field.
+- Enter the amount of ETH you want to send in the "Amount (ETH)" field.
+- Click "Send Money" to initiate a gasless transaction using zkSync.
+- View Transaction Status: The transaction hash will be displayed once the transaction is submitted.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Key Components
+- MetaMask Connection: Connects to the user's MetaMask wallet using Web3.js.
+zkSync Wallet Initialization: Initializes a zkSync wallet to interact with Layer 2 solutions.
+- Balances Fetching: Fetches ETH and token balances using zkSync’s provider.
+- Gasless Transfers: Handles ETH transfers via zkSync with potential token approvals managed through zkSync’s API.
 
-### Advanced Configuration
+##Code Overview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#Main Functionalities
+- connectWallet: Connects to MetaMask and fetches user accounts.
+- initializeZkSyncWallet: Initializes the zkSync wallet for Layer 2 transactions.
+- fetchBalances: Retrieves and displays ETH and token balances for the paymaster and sender.
+- handleSendMoney: Facilitates the transfer of ETH using zkSync, ensuring tokens are approved for the paymaster if necessary.
+  
+#Libraries and Dependencies
+- React: Frontend framework for building UI components.
+- Web3.js: JavaScript library for interacting with the Ethereum blockchain.
+- web3-plugin-zksync: Plugin for integrating zkSync functionality with Web3.js.
+- Material-UI: UI components library for React.
+- zkSync: Layer 2 scaling solution for Ethereum with reduced gas fees.
+  
+##Environment Variables
+To run the application, ensure you have the correct values set in the constants file (constants.js):
+- APPROVAL_TOKEN: The token contract address for approval.
+- PAYMASTER: The paymaster contract address for zkSync transactions.
 
-### Deployment
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+##Troubleshooting
+- Ensure MetaMask is installed and set to the correct network (e.g., Sepolia).
+- Check console logs for errors during wallet connection or zkSync initialization.
+- Verify that the token and paymaster addresses are correct in the constants.js file.
 
-### `npm run build` fails to minify
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+@Serhaki
