@@ -8,7 +8,7 @@
   justify-content: center;
   font-family: 'Roboto', sans-serif; /* Improved font for readability */
   ;
-  background-image:url('C:\Users\jesse\Desktop\flowpay\flowpay\public\assets\images\terraledger.png') no-repeat center center; ;
+  background-image:url('/assets/images/terraledger') no-repeat center center; ;
 }
 
 .title {
@@ -104,6 +104,6 @@ body {
 
 .background {
   height: 100vh;
-  background: url('C:\Users\jesse\Desktop\flowpay\flowpay\public\assets\images\terraledger.png') no-repeat center center;
+  background: url('/assets/images/terraledger.png') no-repeat center center;
   background-size: cover;
 }
