@@ -19,23 +19,11 @@ Before running the application, ensure you have the following:
 - MetaMask extension installed in your browser.
 - An Ethereum wallet with funds in the Sepolia test network (or other zkSync-supported networks).
 
-### Scaffold-ETH
-- Used for rapid development and prototyping of our TerraLedger dApp
-- Provides templates and examples for smart contract development
-
-### The Graph
-- Indexes land ownership data for efficient querying
-- Enables real-time search and verification of land records
-- Utilizes GraphQL API for flexible data retrieval
 
 ### zkSync (Paymaster)
 - Handles payments and transactions within the system
 - Ensures fast and low-cost transactions for users
 
-### Optimism
-- Implements Optimistic Rollups for scalable and cost-effective transaction processing
-- Utilizes Optimism SDK for integration with Layer 2 network
-- Employs Optimism Gateway for cross-network asset management
 
 ## Deployment
 
