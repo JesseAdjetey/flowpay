@@ -88,22 +88,22 @@ zkSync Wallet Initialization: Initializes a zkSync wallet to interact with Layer
 - Balances Fetching: Fetches ETH and token balances using zkSync’s provider.
 - Gasless Transfers: Handles ETH transfers via zkSync with potential token approvals managed through zkSync’s API.
 
-##Code Overview
+## Code Overview
 
-#Main Functionalities
+# Main Functionalities
 - connectWallet: Connects to MetaMask and fetches user accounts.
 - initializeZkSyncWallet: Initializes the zkSync wallet for Layer 2 transactions.
 - fetchBalances: Retrieves and displays ETH and token balances for the paymaster and sender.
 - handleSendMoney: Facilitates the transfer of ETH using zkSync, ensuring tokens are approved for the paymaster if necessary.
   
-#Libraries and Dependencies
+# Libraries and Dependencies
 - React: Frontend framework for building UI components.
 - Web3.js: JavaScript library for interacting with the Ethereum blockchain.
 - web3-plugin-zksync: Plugin for integrating zkSync functionality with Web3.js.
 - Material-UI: UI components library for React.
 - zkSync: Layer 2 scaling solution for Ethereum with reduced gas fees.
   
-##Environment Variables
+## Environment Variables
 To run the application, ensure you have the correct values set in the constants file (constants.js):
 - APPROVAL_TOKEN: The token contract address for approval.
 - PAYMASTER: The paymaster contract address for zkSync transactions.
@@ -111,7 +111,8 @@ To run the application, ensure you have the correct values set in the constants 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-##Troubleshooting
+## Troubleshooting
+
 - Ensure MetaMask is installed and set to the correct network (e.g., Sepolia).
 - Check console logs for errors during wallet connection or zkSync initialization.
 - Verify that the token and paymaster addresses are correct in the constants.js file.
